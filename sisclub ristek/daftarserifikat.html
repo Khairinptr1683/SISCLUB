@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <title>Sidebar Menu</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #sidebar {
+        position: fixed;
+        width: 250px;
+        height: 100%;
+        background: #abd4f0;
+        color: #fff;
+        transition: all 0.3s;
+      }
+
+      #sidebar.active {
+        margin-left: -250px;
+      }
+
+      #sidebar .sidebar-header {
+        padding: 20px;
+        background: #abd4f0;
+      }
+
+      #sidebar ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #4e7bb1;
+      }
+
+      #sidebar ul p {
+        color: #fff;
+        padding: 10px;
+      }
+
+      #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+      }
+
+      #sidebar ul li a:hover {
+        color: #4e7bb1;
+        background: #fff;
+      }
+
+      #sidebar ul li.active > a {
+        color: #fff;
+        background: #4e7bb1;
+      }
+
+      a[data-bs-toggle="collapse"] {
+        position: relative;
+      }
+
+      .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+      }
+
+      ul ul a {
+        font-size: 0.9em !important;
+        padding-left: 30px !important;
+        background-color: #4e7bb1;
+        color: #fff;
+      }
+
+      ul.CTAs {
+        padding: 20px;
+      }
+
+      ul.CTAs a {
+        text-align: center;
+        font-size: 0.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+
+      #sidebarCollapse {
+        width: 100%;
+        padding: 10px;
+        background: #4e7bb1;
+        text-align: center;
+        font-size: 1.1em;
+        cursor: pointer;
+        color: #fff;
+      }
+
+      #sidebarCollapse:hover {
+        background-color: #abd4f0;
+      }
+
+      @media (max-width: 768px) {
+        #sidebar {
+          margin-left: -250px;
+        }
+        #sidebar.active {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <img style="width: 100%" src="himasi.png" />
+        </div>
+        <ul class="list-unstyled components">
+          <li class="active">
+            <a href="home.html">Dashboard</a>
+          </li>
+          <li>
+            <a href="#aboutSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Peminatan</a>
+            <ul class="collapse list-unstyled" id="aboutSubmenu">
+              <li><a href="peminataninfo.html">Peminatan - Information page</a></li>
+              <li><a href="tambah peminatan.html">Tambah Peminatan</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="absensi.html">Absensi</a>
+          </li>
+          <li>
+            <a href="#aboutSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sertifikat</a>
+            <ul class="collapse list-unstyled" id="aboutSubmenu">
+              <li><a href="daftarserifikat.html">Daftar Sertifikat</a> </li>
+              <li><a href="serifikat.html">Upload Sertifikat</a> </li>
+
+        </li>
+        </ul>
+      </nav>
+      <!-- Page Content -->
+      <div id="content">
+        <button type="button" id="sidebarCollapse" class="btn btn-dark">
+          <i class="fas fa-align-left"></i>
+          <span>SISCLUB</span>
+        </button>
+      </div>
+      <section id="utama" style="background-color: #80caff;" >
+        <!-- Form Daftar-->
+        <section id="daftar">
+            <div class="container-lg">
+              <div class="bingkaikata2">
+                <div class="row py-5">
+                  <div class="col-12 py-5 text-center" style="padding-right: 100px; background-color: #FFFF ;color: #0E5AB2; border-radius: 25px;" >
+                    <p style="font-family: 'Manrope';
+                    font-weight: 800;
+                    font-size: 30px; ">DAFTAR SERTIFIKAT SISCLUB 2023</p>
+                    
+        
+                        <!--Formulir Data MHS-->
+                  <div class="row">
+                            <div class="col-12 m-5 " style="text-align: left; padding-bottom: 50px; margin-top: 40px;">
+                               
+                                <div class="row">
+                                <div class="col-12">
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">No.</th>
+                                            <th scope="col">Peserta</th>
+                                            <th scope="col">NIM</th>
+                                            <th scope="col">Batch</th>
+                                            <th scope="col">Peminatan</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">File</th>
+                                            <th scope="col">Aksi</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1.</th>
+                                            <td>Khairinnisa Putri. Z</td>
+                                            <td type="name">F1E121170</td>
+                                            <td>1</td>
+                                            <td> UI/UX Design Mastery </td>
+                                            <td><button class="btn btn-success">Lulus</button></td>
+                                            <td><a href="#">Sertif_Khairinnisa_UI/UX.pdf</a></td>
+                                            <td><button class="btn btn-primary">Edit</button></td>
+                                          </tr>
+
+                                          <tr>
+                                            <th scope="row">2.</th>
+                                            <td>Hana Silvanov</td>
+                                            <td type="name">F1E121167</td>
+                                            <td>1</td>
+                                            <td>Web Developer</td>
+                                            <td><button class="btn btn-success">Lulus</button></td>
+                                            <td><a href="#">Sertif_Hana_UI/UX.pdf</a></td>
+                                           <td><button class="btn btn-primary">Edit</button></td>
+                                          </tr>
+                                          </tr>
+                                          <tr>
+
+                                            <th scope="row">3.</th>
+                                            <td>Tiffany</td>
+                                            <td type="name">F1E121175</td>
+                                            <td>1</td>
+                                            <td>Mobile Development</td>
+                                            <td><button class="btn btn-warning">Gagal</button></td>
+                                            <td><a href="#">Sertif_Tifany_UI/UX.pdf</a></td>
+                                            <td><button class="btn btn-primary">Edit</button></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">4.</th>
+                                            <td>Rizky</td>
+                                            <td type="name">F1E121180</td>
+                                            <td>1</td>
+                                            <td>Machine Learning</td>
+                                            <td><button class="btn btn-warning"> Gagal</button></td>
+                                            <td><a href="#">Sertif_Rizky_UI/UX.pdf</a></td>
+                                            <td><button class="btn btn-primary">Edit</button></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                  </div>
+                </div>
+            </div>   
+            
+        </section>
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Toggling the sidebar
+      const sidebarCollapse = document.getElementById("sidebarCollapse");
+      const sidebar = document.getElementById("sidebar");
+      sidebarCollapse.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

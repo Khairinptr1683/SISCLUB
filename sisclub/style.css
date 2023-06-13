@@ -1,0 +1,113 @@
+.banner {
+  padding-top: 1%;
+  padding-bottom: 11%;
+  color: black;
+  background-color: #80caff;
+}
+.navbar {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.display-1 {
+  padding-top: 100px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 20px;
+
+  color: #052c77;
+}
+
+.plus {
+  color: #052c77;
+  line-height: 50px;
+}
+
+.container1 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 40px;
+  top: 150px;
+}
+
+.banner2 {
+  background-color: #ffffff;
+  padding-right: 80px;
+  padding-left: 650px;
+  padding-bottom: 80px;
+}
+.kanan2 {
+  padding-top: 40px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  color: #052c77;
+}
+.plus2 {
+  color: #052c77;
+  padding-top: 1px;
+  line-height: 40px;
+  font-size: 12px;
+}
+.container2 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  right: 550px;
+  top: 500px;
+}
+
+.banner3 {
+  padding-top: 50px;
+  background-color: #80caff;
+  padding-bottom: 50px;
+  padding-right: 100px;
+}
+
+.container3 {
+  position: absolute;
+  left: 120px;
+  top: 1100px;
+}
+
+.center3 {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 82px;
+
+  color: #13294b;
+}
+
+.plus3 {
+  padding-left: 500px;
+  padding-bottom: 20px;
+  line-height: 30px;
+}
+
+.container4 {
+  padding-left: 300px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #80caff;
+}
+
+.container5 {
+  padding-left: 250px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container6 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 25px;
+  padding-top: 30px;
+  color: #052c77;
+}
